@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+    /* Styling untuk badge di kiri bawah */
+    .preview-badge {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #00bcd4;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        animation: fadeIn 1s ease-out;
+    }
+
+    /* Animasi untuk efek muncul */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Segitiga pada ujung kiri */
+    .preview-badge:before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 15px solid #00bcd4;
+    }
+</style>
+
+    <head>
+
+        <!-- ==============================================
+        Basic Page Needs
+        =============================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+
+        <title>Astral Unison - Article</title>
+
+        <meta name="description" content="Portfolio, Community Profile">
+        <meta name="subject" content="Portfolio, Community Profile">
+        <meta name="author" content="Codings">
+
+        <!-- ==============================================
+        Favicons
+        =============================================== -->
+        <link rel="shortcut icon" href="assets/images/Anison/LOGO Utama.ico">
+        <link rel="apple-touch-icon" href="assets/images/Anison/LOGO Utama.ico">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/Anison/LOGO Utama.ico">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/Anison/LOGO Utama.ico">
+
+        <!-- ==============================================
+        Vendor Stylesheet
+        =============================================== -->
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/slider.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/vendor/icons.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/animation.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/gallery.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css">
+
+        <!-- ==============================================
+        Custom Stylesheet
+        =============================================== -->
+        <link rel="stylesheet" href="assets/css/default.css">
+        <link rel="stylesheet" href="assets/css/theme-light-blue.css">
+
+        <!-- ==============================================
+        Theme Settings
+        =============================================== -->
+        <style>
+            :root {                
+                --header-bg-color: #111111;
+                --nav-item-color: #f5f5f5;
+                --top-nav-item-color: #f5f5f5;
+                --hero-bg-color: #000000;
+
+                --section-1-bg-color: #eeeeee;
+                --section-2-bg-color: #f5f5f5;
+            
+                --footer-bg-color: #191919;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header id="header">
+
+            <!-- Navbar -->
+            <nav data-aos="zoom-out" data-aos-delay="800" class="navbar navbar-expand">
+                <div class="container header">
+
+                    <!-- Navbar Brand-->
+                    <a class="navbar-brand" href="/">
+                        Astral Unison<i class="leverage-2-0">1.0</i>
+                        <!-- 
+                            Custom Logo
+                            <img src="assets/images/logo.svg" alt="Leverage">
+                        -->
+                    </a>
+
+                    <!-- Nav holder -->
+                    <div class="ml-auto"></div>
+
+                     <!-- Navbar Items -->
+                <ul class="navbar-nav items">
+                    <li class="nav-item">
+                        <a href="Index.html#header" class="nav-link smooth-anchor">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Index.html#about" class="nav-link smooth-anchor">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Index.html#services" class="nav-link smooth-anchor">Agenda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Dokumentasi <i class="icon-arrow-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">Artikel</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="Index.html#portfolio-grid">Galeri</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="Index.html#team">Team Admin</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Navbar Icons -->
+                <ul class="navbar-nav icons">
+                    <!-- <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </li> -->
+                    <li class="nav-item social">
+                        <a href="https://www.youtube.com/@AstralUnisonYoutubeChannel" target="_blank"
+                            class="nav-link"><i class="icon-social-youtube"></i></a>
+                    </li>
+                    <li class="nav-item social">
+                        <a href="https://www.instagram.com/astral_unison/" target="_blank" class="nav-link"><i
+                                class="icon-social-instagram"></i></a>
+                    </li>
+                </ul>
+
+                <!-- Navbar Toggle -->
+                <ul class="navbar-nav toggle">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#menu">
+                            <i class="icon-menu m-0"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Navbar Action -->
+                <ul class="navbar-nav action">
+                    <li class="nav-item ml-3">
+                        <a href="#contact" class="btn ml-lg-auto primary-button smooth-anchor"><i
+                                class="icon-speech"></i>JOIN US</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        </header>
+
+        <!-- Hero -->
+        <section id="slider" class="hero p-0 odd featured">
+            <div class="swiper-container no-slider slider-h-75">
+                <div class="swiper-wrapper">
+
+                    <!-- Item 1 -->
+                    <div class="swiper-slide slide-center">
+                        
+                        <img src="assets/images/Anison/YT Banner.png" class="full-image" data-mask="70">
+                        
+                        <div class="slide-content row text-center">
+                            <div class="col-12 mx-auto inner">
+                                <h1 data-aos="zoom-out-up" data-aos-delay="400" class="title effect-static-text">Blog Post</h1>
+                                <nav data-aos="zoom-out-up" data-aos-delay="800" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/Index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Blog Posts</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog" class="section-1 showcase blog-grid masonry news">
+            <div data-aos="zoom-in" data-aos-delay="200" data-aos-anchor="body" class="container full-grid">
+                <div class="row content blog-grid masonry">
+                    <main class="col-12 p-0">
+                        <div class="bricklayer items columns-4">
+                            <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img style="transform: rotate(90deg)" src="https://drive.google.com/thumbnail?id=1pWLT6mA0M4vr3RNdiKO7WN5-v3n_U1wJ&sz=w1000" alt="Tsuritama">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="artikel/tsuritama2024.html">
+                                            <h4>Event Tsuritama <br> 01 Juni 2024</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Astral Unison</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>Juni 2024</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img src="https://drive.google.com/thumbnail?id=1spKAlzOaBLRqnugjogcKRAAq2e8uM-53&sz=w1000" alt="Event Hoshizora">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="artikel/Hoshizora2024.html">
+                                            <h4>Event Hoshizora <br> 7-8 September 2024</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Astral Unison</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>September 2024</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img src="https://drive.google.com/thumbnail?id=12v2ZJyiXwAlXeALGdgAFtXl52yytuPL8&sz=w1000" alt="Hangout D'orange">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="artikel/Hangoutseptember2024.html">
+                                            <h4>Diskusi Bareng <br> 11 September 2024.</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Astral Unison</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>September 2024</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img src="https://drive.google.com/thumbnail?id=1Oxd-rH-egOv416pm6xL0RDseEjv2xeSb&sz=w1000" alt="Mooncake Event">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="artikel/Mooncake2024.html">
+                                            <h4>Event Mooncake <br> 16 September 2024.</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Astral Unison</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>September 2024</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img src="https://drive.google.com/thumbnail?id=18ovq7ZyR8Hr1romYVz9V_z5t0LamIaRw&sz=w1000" alt="POPCON">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="artikel/Popcon2024.html">
+                                            <h4>Event PopCon <br> 10-13 Oktober 2024</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Astral Unison</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>Oktober 2024</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img src="https://drive.google.com/thumbnail?id=1EflJI6rMCN0sT13nmROCC3CoGd7X2i_z&sz=w1000" alt="Nagaboreshi Lantern">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4>Event Nagaboreshi Lantern <br> 17 November 2024</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Astral Unison</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>November 2024</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img src="assets/images/news-6-h.jpg" alt="Lorem ipsum">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4>Why project management increases performance.</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Doe</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>3 Days Ago</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img src="assets/images/news-1-h.jpg" alt="Lorem ipsum">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4>Tips for having a good relationship at work.</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Doe</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>3 Days Ago</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card p-0 text-center item">
+                                <div class="image-over">
+                                    <img src="assets/images/news-2-h.jpg" alt="Lorem ipsum">
+                                </div>
+                                <div class="card-caption col-12 p-0">
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4>Data scientists are a booming profession.</h4>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-lg-flex align-items-center justify-content-center">
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Doe</a>
+                                        <a href="#" class="d-lg-flex align-items-center"><i class="icon-clock"></i>3 Days Ago</a>
+                                    </div>
+                                </div>
+                            </div>  -->
+                        </div>
+                    </main>
+                </div>
+
+                <!-- Pagination -->
+                <!-- <div class="row">
+                    <div class="col-12">
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" tabindex="-1">
+                                        <i class="icon-arrow-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">
+                                        <i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Subscribe/Contact -->
+        <section id="contact" class="hero odd form">
+            <div class="container smaller">
+                <div class="row text-center intro">
+                    <div class="col-12">
+                        <h2>Join Us</h2>
+                        <p class="text-max-800">Silahkan tanyakan tentang komunitas kami disini via instagram.</p>
+                    </div>
+                </div>
+                <form action="https://www.instagram.com/direct/t/111678790227211/" method="GET" target="_blank">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn primary-button">Tanyakan Langsung Kami Via <i class="icon-social-instagram pl-2"></i>Instagram</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="odd">
+
+        <!-- Footer [links] -->
+        <section id="footer" class="footer">
+            <div class="container">
+                <div class="row items footer-widget">
+                    <div class="col-12 col-lg-4 p-0">
+                        <div class="row">
+                            <div class="branding col-12 p-3 text-center text-lg-left item">
+                                <div class="brand">
+                                    <a href="/" class="logo">
+                                                <img src="assets/images/Anison/LOGO Utama.png" alt="Astral Unison">
+                                           ANISON
+                                    </a>
+                                </div>
+                                <p class="text-justify">Sebuah Komunitas Jejepangan. yang berada di Samarinda berusaha menjalin pertemanan dan mencari pengalaman untuk perkembangan individu masing-masing.</p>
+                                <ul class="navbar-nav social share-list mt-0 ml-auto">
+                                    <li class="nav-item mr-3">
+                                        <a href="https://www.instagram.com/astral_unison/" target="_blank" class="nav-link">
+                                            <img src="assets/images/icons/icons8-instagram-48.png"></a>
+                                    </li>
+                                    <li class="nav-item mr-3">
+                                        <a href="https://www.tiktok.com/@astral.unison" target="_blank" class="nav-link">
+                                            <img src="assets/images/icons/icons8-tiktok-48.png">
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mr-3">
+                                        <a href="https://www.youtube.com/@AstralUnisonYoutubeChannel" target="_blank" class="nav-link">
+                                            <img src="assets/images/icons/icons8-youtube-48.png">
+                                        </a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><i class="icon-social-instagram ml-0"></i>
+                                            <img src=""></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><i class="icon-social-youtube"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><i class="icon-social-tiktok"></i></a>
+                                        </li>
+                                        <a href="#" class="nav-link"><i class="icon-social-twitter"></i></a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8 p-0">
+                        <div class="row">
+                            <div class="col-12 col-lg-5 p-3 text-center text-lg-left item">
+                                <h4 class="title">information</h4>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <i class="icon-phone mr-2"></i>
+                                            +62 -
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <i class="icon-envelope mr-2"></i>
+                                            anison.official1@gmail.com
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <i class="icon-location-pin mr-2"></i>
+                                            Samarinda, Kalimantan timur
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#contact"
+                                            class="mt-4 mr-auto ml-auto ml-lg-0 btn dark-button smooth-anchor"><i
+                                                class="icon-speech"></i>SEND A MESSAGE</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <div class="col-12 col-lg-4 p-3 text-center text-lg-left item">
+                                <h4 class="title">Our Services</h4>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Website Development</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Building Applications</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">SEO & Digital Marketing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Branding and Identity</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Digital Images & Videos</a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="col-12 col-lg-6 p-3 text-center text-lg-left item">
+                                <h4 class="title">Popular Tags</h4>
+                                <a href="#" class="badge tag">Event Gathering</a>
+                                <a href="#" class="badge tag">Karaoke</a>
+                                <a href="#" class="badge tag">Hangout</a>
+                                <a href="#" class="badge tag">Nonton Bareng</a>
+                                <a href="#" class="badge tag">Food Culinary</a>
+                                <a href="#" class="badge tag">Discussion</a>
+                                <a href="#" class="badge tag">Iftar Gathering</a>
+                                <a href="#" class="badge tag">celebration</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <section id="copyright" class="p-3 copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5 p-3 text-center text-lg-left">
+                        <!-- <p>Enjoy the low price. We are tracking any intention of piracy.</p> -->
+                        <p>We Hope you guys Enjoy in Astral Unison Community</p>
+                        <!--
+                                Suggestion: Replace the text above with a description of your website.
+                             -->
+                    </div>
+                    <div class="col-12 col-md-2 p-3 text-center text-lg-left">
+                        <!-- <p>Enjoy the low price. We are tracking any intention of piracy.</p> -->
+                        <p>icon by <a href="https://icons8.com/icon/set/social-media/group-ui--static" target="_blank">Icon8</a></p>
+                        <!--
+                                Suggestion: Replace the text above with a description of your website.
+                             -->
+                    </div>
+                    <div class="col-12 col-md-5 p-3 text-center text-lg-right">
+                        <p>© 2024 ARdev14 Design Template by <a href="https://codings.dev"
+                                target="_blank">Leverage</a>.</p>
+                    </div>
+                    <!-- <div class="col-12 col-md-6 p-3 text-center text-lg-right">
+                        <p>© 2020 Leverage is Proudly Powered by <a href="https://codings.dev"
+                                target="_blank">Codings</a>.</p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+         <div class="preview-badge">
+            Preview Mode
+        </div>
+    </footer>
+
+        <!-- #region Global ============================ -->
+
+        <!-- Modal [responsive menu] -->
+        <div id="menu" class="p-0 modal fade" role="dialog" aria-labelledby="menu" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-slideout" role="document">
+                <div class="modal-content full">
+                    <div class="modal-header" data-dismiss="modal">
+                        Menu <i class="icon-close"></i>
+                    </div>
+                    <div class="menu modal-body">
+                        <div class="row w-100">
+                            <div class="items p-0 col-12 text-center">
+                                <!-- Append [navbar] -->
+                            </div>
+                            <div class="contacts p-0 col-12 text-center">
+                                <!-- Append [navbar] -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll [to top] -->
+        <div id="scroll-to-top" class="scroll-to-top">
+            <a href="#header" class="smooth-anchor">
+                <i class="icon-arrow-up"></i>
+            </a>
+        </div>        
+        
+        <!-- ==============================================
+        Google reCAPTCHA // Put your site key here
+        =============================================== -->
+        <!-- <script src="https://www.google.com/recaptcha/api.js?render=6Lf-NwEVAAAAAPo_wwOYxFW18D9_EKvwxJxeyUx7"></script> -->
+
+        <!-- ==============================================
+        Vendor Scripts
+        =============================================== -->
+        <script src="assets/js/vendor/jquery.min.js"></script>
+        <script src="assets/js/vendor/jquery.easing.min.js"></script>
+        <script src="assets/js/vendor/jquery.inview.min.js"></script>
+        <script src="assets/js/vendor/popper.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/vendor/ponyfill.min.js"></script>
+        <script src="assets/js/vendor/slider.min.js"></script>
+        <script src="assets/js/vendor/animation.min.js"></script>
+        <script src="assets/js/vendor/progress-radial.min.js"></script>
+        <script src="assets/js/vendor/bricklayer.min.js"></script>
+        <script src="assets/js/vendor/gallery.min.js"></script>
+        <script src="assets/js/vendor/shuffle.min.js"></script>
+        <script src="assets/js/vendor/cookie-notice.min.js"></script>
+        <script src="assets/js/vendor/particles.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <!-- #endregion Global ========================= -->
+
+    </body>
+</html>
